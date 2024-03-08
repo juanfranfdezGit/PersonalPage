@@ -115,6 +115,7 @@ li {
     bottom: 0;
     left: -5vw;
     height: 100vh;
+    max-width: 40vw;
     z-index: 1;
 }
 
@@ -247,7 +248,7 @@ li {
     padding-top: 10vh;
     position: relative;
     width: 100vw;
-    flex-wrap: wrap;
+    flex-direction: column;
     background: #273036;
 }
 
@@ -379,4 +380,109 @@ li {
     height: 70vh;
     width: 100vw;
     top: 140vh;
+}
+
+/* MEDIAQUERYS */
+
+@media screen {
+    @media (max-width: 1024px)
+    {
+        .headerBack {
+            width: 240vw;      
+        }
+
+        .header .info {
+            width: 100%;
+            left: 67%;
+        }
+
+        .header .info h1 {
+            font-size: 2.8em;
+        }
+
+        .header .portrait {
+            max-width: 90vw;
+            height: 100vh;
+            left: -35%;
+            top: 10%;
+        }
+
+        .projects .project {
+            flex-direction: column;
+        }
+
+        .project .screenshot {
+            width: 100%;
+        }
+
+        .project .info {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .practices .wave-container {
+            top: -10vh;
+        }
+        
+        .cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    @media (max-width: 600px){
+        h1 {
+            text-align: center;
+        }
+
+        .headerBack {
+            width: 280vw;      
+        }
+
+        .header .info {
+            width: 100%;
+            left: 50%;
+            top: 15%;
+        }
+
+        .header .info h1 {
+            font-size: 1.8em;
+            line-height: 45px;
+        }
+
+        .header .info h2 {
+            font-size: 1em;
+        }
+
+        .header .portrait {
+            max-width: 90vw;
+            height: 70vh;
+            left: -5%;
+            top: 30%;
+        }
+
+        .techs {
+            text-align: center;
+        }
+
+        .techs ul li {
+            width: 50px;
+        }
+
+        .project .screenshot {
+            width: 100%;
+        }
+        
+        .project .info {
+            width: 100%;
+        }
+        
+        .project .info .title {
+            font-size: 2em;
+        }
+        
+        .project .info .description {
+            font-size: 18px;
+            width: 100%;
+        }
+    }
 }
